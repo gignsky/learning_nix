@@ -7,11 +7,10 @@ pkgs.mkShellNoCC {
   packages = with pkgs; [
     cowsay
     lolcat
+    hello
   ];
 
-GREETING="Hello, Nix!";
-
 shellHook = ''
-  echo $GREETING | cowsay | lolcat
+  hello | cowsay | lolcat
 '';
 }
